@@ -1,0 +1,35 @@
+package kozlov.artyom.bookly.presentation.aboutfragment
+
+import android.os.Bundle
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import kozlov.artyom.bookly.R
+
+
+class CinemaAboutFragment : Fragment() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+    }
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_cinema_about, container, false)
+    }
+
+    companion object {
+
+        fun newInstance(param1: String, param2: String) =
+            CinemaAboutFragment().apply {
+                arguments = Bundle().apply {
+
+                }
+            }
+    }
+}

@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Bookly</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="logo_site">logo_site</string>
+    <string name="carousel_poster">carousel_poster</string>
+    <string name="play">play</string>
+    <string name="text_harry_potter">Harry Potter and the Goblet of Fire</string>
+    <string name="author">J.K. Rowling</string>
+    <string name="_19_99">19.99 €</string>
+    <string name="euro">&#160;€</string>
+    <string name="_4_8">4.8</string>
+    <string name="_2390">(2390)</string>
+    <string name="right">(</string>
+    <string name="left">)</string>
+    <string name="best_seller">Best Seller</string>
+</resources>
