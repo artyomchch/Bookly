@@ -25,11 +25,18 @@ class CinemaAboutFragment : Fragment() {
 
     companion object {
 
-        fun newInstance(param1: String, param2: String) =
+        fun newInstance(image: String, title: String, author: String) =
             CinemaAboutFragment().apply {
                 arguments = Bundle().apply {
-
+                    this.putString(IMAGE, image)
+                    this.putString(TITLE, title)
+                    this.putString(AUTHOR, author)
                 }
             }
+
+
+        private const val IMAGE = "image"
+        private const val TITLE = "title"
+        private const val AUTHOR = "author"
     }
 }

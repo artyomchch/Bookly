@@ -107,23 +107,22 @@ class CinemaFragment : Fragment() {
 
         with(binding.listRecyclerBest) {
             movieListAdapter = MovieItemAdapter()
-
             adapter = movieListAdapter
             addItemDecoration(HeaderDecoration(context, this, R.layout.header))
+
+            movieListAdapter.onValueItemClickListener = {
+                requireActivity().supportFragmentManager.popBackStack()
+                requireActivity().supportFragmentManager.beginTransaction()
+                  //  .replace()
+            }
         }
 
     }
 
 
-
-
-    companion object {
-
-        fun newInstance(param1: String, param2: String) =
-            CinemaFragment().apply {
-                arguments = Bundle().apply {
-
-                }
-            }
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
+
 }
