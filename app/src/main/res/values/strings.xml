@@ -14,4 +14,8 @@
     <string name="right">(</string>
     <string name="left">)</string>
     <string name="best_seller">Best Seller</string>
+    <string name="close">close</string>
+    <string name="bucket">bucket</string>
+    <string name="free_preview">Free preview</string>
+    <string name="you_can_also_like">You can also like</string>
 </resources>

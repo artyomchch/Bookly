@@ -4,10 +4,11 @@ import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
-import com.bumptech.glide.Glide
-import kozlov.artyom.bookly.R
 import kozlov.artyom.bookly.databinding.BestItemBinding
 import kozlov.artyom.bookly.domain.entity.BestItem
+import kozlov.artyom.bookly.utils.amount
+import kozlov.artyom.bookly.utils.euro
+import kozlov.artyom.bookly.utils.setImage
 
 class MovieItemAdapter : ListAdapter<BestItem, MovieItemViewHolder>(MovieItemDiffCallback()) {
 
@@ -22,16 +23,12 @@ class MovieItemAdapter : ListAdapter<BestItem, MovieItemViewHolder>(MovieItemDif
     override fun onBindViewHolder(holder: MovieItemViewHolder, position: Int) {
         val item = getItem(position)
         with(holder.binding) {
-            Glide.with(root)
-                .load(item.image)
-                .placeholder(R.drawable.img)
-                .centerCrop()
-                .into(imageUrl)
+            imageUrl.setImage(root.context, item.image)
             title.text = item.title
             author.text = item.author
-            price.text = item.price.toString() + root.context.getString(R.string.euro)
+            price.text = item.price.toString().euro(root.context)
             score.text = item.score.toString()
-            amount.text = root.context.getString(R.string.right) + item.amount.toString() + root.context.getString(R.string.left)
+            amount.text = item.amount.toString().amount(root.context)
         }
 
         holder.itemView.setOnClickListener {

@@ -1,14 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/cinema_background"
     tools:context=".presentation.aboutfragment.CinemaAboutFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
 
-</FrameLayout>
+
+
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="43dp"
+        android:contentDescription="@string/close"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_close"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/bucket"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="30dp"
+        android:contentDescription="@string/bucket"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_bucket"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_marginTop="75dp"
+        android:layout_width="match_parent"
+        android:overScrollMode="never"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/tickets"
+            layout="@layout/films">
+
+        </include>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

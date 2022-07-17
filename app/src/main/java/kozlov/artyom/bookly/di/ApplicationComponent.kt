@@ -3,6 +3,7 @@ package kozlov.artyom.bookly.di
 import android.content.Context
 import dagger.BindsInstance
 import dagger.Component
+import kozlov.artyom.bookly.presentation.aboutfragment.CinemaAboutFragment
 import kozlov.artyom.bookly.presentation.cinemafragment.CinemaFragment
 
 
@@ -13,6 +14,8 @@ import kozlov.artyom.bookly.presentation.cinemafragment.CinemaFragment
 interface ApplicationComponent {
 
     fun inject(fragment: CinemaFragment)
+
+    fun inject(fragment: CinemaAboutFragment)
 
 
     @Component.Factory

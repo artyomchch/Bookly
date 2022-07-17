@@ -8,4 +8,6 @@ interface MovieRepository {
     suspend fun getCarouselList(): List<CarouselItem>
 
     suspend fun getBestList(): List<BestItem>
+
+    suspend fun getLikeList(): List<CarouselItem>
 }

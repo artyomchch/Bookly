@@ -22,5 +22,9 @@ class MovieRepositoryImpl @Inject constructor(
         return mapper.mapListNetworkModelToListEntityBest(retrofit.getBest())
     }
 
+    override suspend fun getLikeList(): List<CarouselItem> {
+        return mapper.mapListNetworkModelToListEntityCarousel(retrofit.getSimilar())
+    }
+
 
 }

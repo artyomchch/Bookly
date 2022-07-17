@@ -9,4 +9,4 @@ data class BestItem(
     val score: Double,
     val amount: Int
 
-): ListMarker
+)

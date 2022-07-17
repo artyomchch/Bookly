@@ -5,4 +5,4 @@ data class CarouselItem(
     val id: Int,
     val image: String
 
-): ListMarker
+)

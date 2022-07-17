@@ -5,14 +5,18 @@
       <map>
         <entry key="..\:/Users/User/AndroidStudioProjects/Bookly/app/src/main/res/drawable/ic_bookly.xml" value="0.1795" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Bookly/app/src/main/res/drawable/ic_search.xml" value="0.1795" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Bookly/app/src/main/res/drawable/left_button.xml" value="0.2225" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Bookly/app/src/main/res/drawable/right_button.xml" value="0.2225" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Bookly/app/src/main/res/drawable/shape.xml" value="0.196" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Bookly/app/src/main/res/layout/CarouselItem.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Bookly/app/src/main/res/layout/activity_main.xml" value="0.3484375" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Bookly/app/src/main/res/layout/best_item.xml" value="0.5" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Bookly/app/src/main/res/layout/carousel_item.xml" value="0.33" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Bookly/app/src/main/res/layout/films.xml" value="0.30012825994014536" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Bookly/app/src/main/res/layout/fragment_cinema.xml" value="0.2573057733428368" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/Bookly/app/src/main/res/layout/fragment_cinema_about.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Bookly/app/src/main/res/layout/fragment_cinema_about.xml" value="0.25" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Bookly/app/src/main/res/layout/header.xml" value="0.67" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Bookly/app/src/main/res/layout/like_item.xml" value="0.3009833262077811" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Bookly/app/src/main/res/layout/shape.xml" value="0.18802083333333333" />
       </map>
     </option>

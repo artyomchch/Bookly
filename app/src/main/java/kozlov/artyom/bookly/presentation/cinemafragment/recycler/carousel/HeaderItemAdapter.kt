@@ -8,6 +8,7 @@ import com.bumptech.glide.Glide
 import kozlov.artyom.bookly.R
 import kozlov.artyom.bookly.databinding.CarouselItemBinding
 import kozlov.artyom.bookly.domain.entity.CarouselItem
+import kozlov.artyom.bookly.utils.setImage
 
 class HeaderItemAdapter: ListAdapter<CarouselItem, HeaderItemViewHolder>(HeaderItemDiffCallback()) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HeaderItemViewHolder {
@@ -17,12 +18,6 @@ class HeaderItemAdapter: ListAdapter<CarouselItem, HeaderItemViewHolder>(HeaderI
 
     override fun onBindViewHolder(holder: HeaderItemViewHolder, position: Int) {
         val item = getItem(position) ?: return
-        Glide.with(holder.binding.root)
-            .load(item.image)
-            .placeholder(R.drawable.img)
-            .centerCrop()
-            .into(holder.binding.carouselPoster)
-
-
+        holder.binding.carouselPoster.setImage(holder.binding.root.context, item.image)
     }
 }
