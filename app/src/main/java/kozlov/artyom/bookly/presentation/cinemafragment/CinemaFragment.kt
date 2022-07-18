@@ -2,7 +2,6 @@ package kozlov.artyom.bookly.presentation.cinemafragment
 
 import android.content.Context
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -69,23 +68,39 @@ class CinemaFragment : Fragment() {
     }
 
     private fun observeValuesRecycler() {
-        viewModel.valueItemsBest.observe(viewLifecycleOwner) {
-            val duplicate: List<BestItem> = mutableListOf<BestItem>().apply {
-                addAll(it)
-                addAll(it)
-                addAll(it)
+        viewModel.valueItemsBest.observe(viewLifecycleOwner) { status ->
+            when (status) {
+                is FilmObserver.Success -> {
+                    val duplicate: List<BestItem> = mutableListOf<BestItem>().apply {
+                        status.data?.let { addAll(it) }
+                        status.data?.let { addAll(it) }
+                        status.data?.let { addAll(it) }
+                    }
+                    movieListAdapter.submitList(duplicate)
+                }
+                is FilmObserver.Error -> {
+                    //Change ui...
+                }
             }
 
-            movieListAdapter.submitList(duplicate)
-            Log.d("TAG", "observeValuesRecycler: ${it}.")
+
         }
-        viewModel.valueItemsCarousel.observe(viewLifecycleOwner) {
-            val duplicate: List<CarouselItem> = mutableListOf<CarouselItem>().apply {
-                addAll(it)
-                addAll(it)
-                addAll(it)
+        viewModel.valueItemsCarousel.observe(viewLifecycleOwner) { status ->
+            when (status) {
+                is FilmObserver.Success -> {
+                    val duplicate: List<CarouselItem> = mutableListOf<CarouselItem>().apply {
+                        status.data?.let { addAll(it) }
+                        status.data?.let { addAll(it) }
+                        status.data?.let { addAll(it) }
+                    }
+                    headerListAdapter.submitList(duplicate)
+                }
+                is FilmObserver.Error -> {
+                    //Change ui...
+                }
             }
-            headerListAdapter.submitList(duplicate)
+
+
         }
 
     }
